@@ -68,9 +68,12 @@ class MovieDetailsPage extends Component {
             </ul>
             <Route to={`${match.path}/cast`} component={Cast}/>
             <Route to={`${match.path}/reviews`} component={Reviews}/>
-            
-            {console.log('cast:', `${match.path}/cast`)}
-            {console.log('reviews:', `${match.path}/reviews`)}
+
+            {console.log('cast в Нав-Линк:', `${match.url}/cast`)}
+            {console.log('reviews в Нав-Линк:', `${match.url}/reviews`)}
+
+            {console.log('cast в рауте:', `${match.path}/cast`)}
+            {console.log('reviews в рауте:', `${match.path}/reviews`)}
         </>
     }
 
