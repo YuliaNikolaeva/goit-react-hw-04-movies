@@ -1,0 +1,35 @@
+.navList {
+    list-style: none;
+    font-family: sans-serif;
+}
+
+.navItem {
+    display: inline-block;
+}
+
+.navItemLink {
+    width: 200px;
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #d1cdcd;
+}
+
+.navItemLinkActive {
+    background-color: #cacddb;
+}
+
+.navItem a {
+    text-decoration: none;
+    color: #4b4848;
+}
+
+.navItem:hover {
+    background-color: #d3dcee;
+    text-decoration: underline;
+}
+
+.navItem:not(:last-child) {
+    margin-right: 20px;
+}
