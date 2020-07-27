@@ -1,0 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.list {
+    font-family: sans-serif;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,83 +1,108 @@
 import React, {Component} from 'react';
 import {NavLink, Route} from 'react-router-dom';
 
-import {getDetailsAboutOneFilm} from '../services/filmsApi';
+import s from './MovieDetailsPage.module.css'
+
+import {getDetailsAboutOneFilm, imageBaseUrl} from '../services/filmsApi';
+
+import SectionContainer from '../components/Containers/SectionContainer';
+import BoxContainer from '../components/Containers/BoxContainer';
+
 
 import Cast from '../components/Cast/Cast';
 import Reviews from '../components/Reviews/Reviews'
-
+import FilmDetails from '../components/FilmDetails/FilmDetails';
+import Genres from '../components/Genres/Genres';
 
 
 class MovieDetailsPage extends Component {
     state ={
+        genres: [],
         id: null,
         overview: null,
+        poster_path: null,
         title: null,
         vote_average: null,
-        vote_count: null,
-        belongs_to_collection: null,
+
     };
 
     componentDidMount() {
         const {movieId} = this.props.match.params
 
        getDetailsAboutOneFilm(movieId)
-       .then(response => this.setState({...response}))
+       
+       .then(response =>  this.setState({...response}))
     }
 
     render() {
         const {
+            genres,
+            overview,
+            poster_path,
             title, 
-            overview, 
-            vote_count, 
             vote_average,
         } = this.state;
 
-
         const {match} = this.props;
-
-        console.log('Матч-паз', match.path)
-        console.log('Матч-урл', match.url)
-        console.log('Парамз', match.params.movieId)
+        const voteAverage = vote_average * 10;
 
         return <>
-            <div>
-                <h2>{title}</h2>
-                <div>
-                    <h3>Overview</h3>
-                    <p>{overview}</p>
+            <SectionContainer sectionHead={title}>
+                <div className={s.cardBox}>
+                    <div className={s.imgBox}>
+                        <img 
+                            src={`${imageBaseUrl}${poster_path}`} 
+                            alt={title}
+                            className={s.image}
+                            ></img>
+                        <ul className={s.navLinkList}>
+                            <li className={s.navLinkItem}>
+                                <NavLink 
+                                    exact to={`${match.url}/cast`}
+                                    className={s.navItemLink}
+                                    activeClassName={s.navItemLinkActive}
+                                >Cast</NavLink>
+                            </li>
+                            <li className={s.navLinkItem}>
+                                <NavLink 
+                                    exact to={`${match.url}/reviews`}
+                                    className={s.navItemLink}
+                                    activeClassName={s.navItemLinkActive}
+                                >Reviews</NavLink>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <BoxContainer>
+                            <FilmDetails 
+                                filmDetailName={"User Score"}
+                                filmDetailValue={`${voteAverage}%`} 
+                            />
+                        </BoxContainer>
+
+                        <BoxContainer>
+                            <FilmDetails 
+                                filmDetailName={"Overview"}
+                                filmDetailValue={overview} 
+                            />
+                        </BoxContainer>
+
+                        <BoxContainer>
+                            <Genres head={"Genres"} genres={genres}/>
+                        </BoxContainer>
+
+
+                    </div>
                 </div>
+ 
 
-                <div>
-                    <h3>Vote count</h3>
-                    <p>{vote_count}</p>
-                </div>
+                <Route exact path={`${match.path}/cast`} component={Cast} />
+                <Route exact path={`${match.path}/reviews`} component={Reviews} />
+            </SectionContainer>
 
-                <div>
-                    <h3>Vote average</h3>
-                    <p>{vote_average}</p>
-                </div>
-            </div>
-            <ul>
-                <li>
-                    <NavLink to={`${match.url}/cast`}>Cast</NavLink>
-                </li>
-                <li>
-                    <NavLink to={`${match.url}/reviews`}>Reviews</NavLink>
-                </li>
-            </ul>
-            <Route to={`${match.path}/cast`} component={Cast}/>
-            <Route to={`${match.path}/reviews`} component={Reviews}/>
-
-            {console.log('cast в Нав-Линк:', `${match.url}/cast`)}
-            {console.log('reviews в Нав-Линк:', `${match.url}/reviews`)}
-
-            {console.log('cast в рауте:', `${match.path}/cast`)}
-            {console.log('reviews в рауте:', `${match.path}/reviews`)}
         </>
-    }
-
-
-}
+    };
+};
 
 export default MovieDetailsPage;

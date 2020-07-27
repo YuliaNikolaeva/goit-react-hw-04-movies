@@ -6,13 +6,16 @@ import s from './App.module.css';
 import HomePage from './pages/HomePage';
 import MoviesPage from './pages/MoviesPage';
 import MovieDetailsPage from './pages/MovieDetailsPage';
-import PageNotFound from './pages/PageNotFound'
+import PageNotFound from './pages/PageNotFound';
+
+import MenuContainer from './components/Containers/MenuContainer';
 
 
 
 const App = () => 
     <>
-        <ul className={s.navList}>
+	<MenuContainer>
+		<ul className={s.navList}>
 			<li className={s.navItem}>
 				<NavLink 
 					exact
@@ -29,7 +32,9 @@ const App = () =>
 					>Поиск фильмов
 				</NavLink>
 			</li>
-        </ul>
+		</ul>
+	</MenuContainer>
+
         <Switch>
 			<Route exact path="/" component={HomePage} />
 			<Route path="/movies/:movieId" component={MovieDetailsPage} />

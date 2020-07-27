@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    line-height: 2;
+    padding: 5px 10px;
+    border-radius: 7px;
+    background-color: #bfc7c8;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.item a {
+    text-decoration: none;
+    color: #4b4848;
+}
+
+
+.item:hover {
+    background-color: #aab3b4;
+    text-decoration: underline;
+}

@@ -1,0 +1,10 @@
+.listItem {
+    padding: 5px;
+    border-radius: 7px;
+    border: 1px solid #bfc7c8;
+    margin-right: 10px;
+}
+
+.listItem:nth-last-child(1) {
+    margin-right: 0px;
+}

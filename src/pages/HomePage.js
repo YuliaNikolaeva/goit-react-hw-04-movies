@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom'
 import {getAllFilms}  from '../services/filmsApi';
+
+
+
+import SectionContainer from '../components/Containers/SectionContainer';
+import FilmsList from '../components/Films/FilmsList'
+import FilmsListItem from '../components/Films/FilmsListItem'
 
 
 
@@ -21,19 +26,17 @@ class HomePage extends Component {
     };
 
     render() {
-        // console.log(this.props.match.url)
         return <>
-                <h2>Это домашняя страница!!!</h2>
-                <ul>
+            <SectionContainer sectionHead="Films">
+                <FilmsList>
                     {this.state.films.map(film => (
-                        <li key={film.id}>
-                            <Link to={`/movies/${film.id}`}>{film.title || film.name}</Link>
-                        </li>
+                        <FilmsListItem film={film} key={film.id}/>
                     ))}
-                </ul>
+                </FilmsList >
+            </SectionContainer>
         </>
-    }
-}
+    };
+};
 
 
 export default HomePage;

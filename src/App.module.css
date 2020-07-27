@@ -10,14 +10,16 @@
 .navItemLink {
     width: 200px;
     text-decoration: none;
-    background-color: #ffffff;
+    background-color: #cacddb;
     padding: 10px 15px;
     border-radius: 5px;
     border: 1px solid #d1cdcd;
+    cursor: pointer;
 }
 
 .navItemLinkActive {
-    background-color: #cacddb;
+    background-color: #ffffff;
+    cursor: default;
 }
 
 .navItem a {

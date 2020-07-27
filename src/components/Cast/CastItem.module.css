@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.photo {
+    width: 80px;
+    margin-bottom: 5px;
+}
+
+.castItem {
+    text-align: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #bfc7c8;
+    width: 155px;
+
+}
