@@ -1,0 +1,37 @@
+.navList {
+    list-style: none;
+    font-family: sans-serif;
+}
+
+.navItem {
+    display: inline-block;
+}
+
+.navItemLink {
+    width: 200px;
+    text-decoration: none;
+    background-color: #cacddb;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #d1cdcd;
+    cursor: pointer;
+}
+
+.navItemLinkActive {
+    background-color: #ffffff;
+    cursor: default;
+}
+
+.navItem a {
+    text-decoration: none;
+    color: #4b4848;
+}
+
+.navItem:hover {
+    background-color: #d3dcee;
+    text-decoration: underline;
+}
+
+.navItem:not(:last-child) {
+    margin-right: 20px;
+}

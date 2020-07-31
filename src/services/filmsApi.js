@@ -32,12 +32,11 @@ const getReviewsAboutOneFilm = (movieId) => {
 };
 
 
-// const getReviewsAboutOneFilm = (movieId) => {
-//     console.log('LINK!!!', `${baseUrl}/movie/${movieId}/reviews?api_key=${key}`)
+const getFilmByRequest = (query) => {
+    return axios
+    .get(`${baseUrl}/search/movie?api_key=${key}&language=en-US&page=1&include_adult=false&query=${query}`)
+    .then(response => response.data.results);
+};
 
-//     return axios
-//     .get(`${baseUrl}/movie/${movieId}/reviews?api_key=${key}`)
-//     .then(response => console.log(response.data.results));
-// };
 
-export {imageBaseUrl, getAllFilms, getDetailsAboutOneFilm, getReviewsAboutOneFilm, getCastAboutOneFilm};
+export {imageBaseUrl, getAllFilms, getDetailsAboutOneFilm, getReviewsAboutOneFilm, getCastAboutOneFilm, getFilmByRequest};

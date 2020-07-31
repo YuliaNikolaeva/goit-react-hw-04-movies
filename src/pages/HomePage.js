@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
+
 import {getAllFilms}  from '../services/filmsApi';
 
-
-
+import Error from '../components/Error';
 import SectionContainer from '../components/Containers/SectionContainer';
-import FilmsList from '../components/Films/FilmsList'
-import FilmsListItem from '../components/Films/FilmsListItem'
+import FilmsList from '../components/Films/FilmsList';
+import FilmsListItem from '../components/Films/FilmsListItem';
 
 
 
@@ -26,14 +26,22 @@ class HomePage extends Component {
     };
 
     render() {
+        const {films, errorMessage} = this.state;
+
         return <>
-            <SectionContainer sectionHead="Films">
-                <FilmsList>
-                    {this.state.films.map(film => (
-                        <FilmsListItem film={film} key={film.id}/>
-                    ))}
-                </FilmsList >
-            </SectionContainer>
+            {errorMessage && <Error />}
+            {films.length > 0 && 
+                <SectionContainer sectionHead="Films">
+                    <FilmsList>
+                        {this.state.films.map(film => (
+                            <FilmsListItem 
+                                film={film} 
+                                key={film.id}
+                            />
+                        ))}
+                    </FilmsList >
+                </SectionContainer>
+            }
         </>
     };
 };

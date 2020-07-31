@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.formSearch {
+    width: 300px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.inputFormSearch {
+    padding: 5px 10px;
+    width: 100%;
+    border: 1px solid #d1cdcd;
+}
+
+.btnFormSearch {
+    text-align: center;
+    padding: 5px 10px;
+    border: 1px solid #d1cdcd;
+    color: #4b4848;
+    background-color: #dbe6f0;
+    cursor: pointer;
+
+}

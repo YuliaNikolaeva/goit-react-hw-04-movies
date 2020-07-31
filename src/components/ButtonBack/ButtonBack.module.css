@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.btnBack {
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #bfc7c8;
+    background-color: #e5edee;
+    cursor: pointer;
+}
+
+.btnBack:hover {
+    background-color: #bfc7c8;
+}

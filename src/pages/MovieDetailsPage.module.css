@@ -16,43 +16,6 @@
     margin-bottom: 15px;
 }
 
-.navLinkList {
-    width: 200px;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-.navLinkItem {
-    width: 90px;
-    padding: 5px 0;
-    border-radius: 7px;
-    background-color: #bfc7c8;
-    text-align: center;
-    cursor: pointer;
-}
-
-
-.navLinkItem a {
-    text-decoration: none;
-    color: #4b4848;
-}
-
-.navLinkItem:hover {
-    background-color: #d3dcee;
-    text-decoration: underline;
-    border: 1px solid #acabab;
-}
-
-
 .image {
     margin-bottom: 10px;
-}
-
-.navItemLink {
-    color: chartreuse;
-}
-
-.navItemLinkActive {
-    color: brown;
 }

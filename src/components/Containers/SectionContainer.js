@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import s from './SectionContainer.module.css';
 
 const SectionContainer = ({children, sectionHead}) => {
@@ -7,5 +8,15 @@ const SectionContainer = ({children, sectionHead}) => {
         {children}
         </section>
 };
+
+
+SectionContainer.defaultProps = {
+    sectionHead: 'Section head',
+};
+
+SectionContainer.propTypes = {
+    sectionHead: PropTypes.string,
+};
+
 
 export default SectionContainer;

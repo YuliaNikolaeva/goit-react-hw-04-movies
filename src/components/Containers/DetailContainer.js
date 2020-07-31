@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import s from './DetailContainer.module.css'
 
 const DetailContainer = ({head, children}) => {
@@ -7,5 +8,15 @@ const DetailContainer = ({head, children}) => {
         {children}
     </div>
 };
+
+
+DetailContainer.defaultProps = {
+    head: 'Head name',
+};
+
+DetailContainer.propTypes = {
+    head: PropTypes.string,
+};
+
 
 export default DetailContainer;

@@ -1,6 +1,6 @@
 import React from 'react';
-
-import s from './Genres.module.css'
+import PropTypes from 'prop-types';
+import s from './Genres.module.css';
 
 import GenresItem from './GenresItem';
 
@@ -17,6 +17,17 @@ const Genres = ({head, genres}) => {
             </ul>
         </div>
     </>)
+};
+
+
+Genres.defaultProps = {
+    head: 'Head name', 
+    genres: [],
+};
+
+Genres.propTypes = {
+    head: PropTypes.string, 
+    genres: PropTypes.array,
 };
 
 
