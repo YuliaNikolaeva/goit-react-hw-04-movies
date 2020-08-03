@@ -18,7 +18,8 @@ import Cast from '../components/Cast/Cast';
 import Reviews from '../components/Reviews/Reviews';
 import FilmDetails from '../components/FilmDetails/FilmDetails';
 import Genres from '../components/Genres/Genres';
-import InnerNavigation from '../components/InnerNavigation/InnerNavigation';
+import InnerNavigationList from '../components/InnerNavigation/InnerNavigationList';
+import InnerNavigationItem from '../components/InnerNavigation/InnerNavigationItem';
 import ButtonBack from '../components/ButtonBack/ButtonBack';
 import Error from '../components/Error';
 
@@ -73,16 +74,18 @@ class MovieDetailsPage extends Component {
                         className={s.image}
                     ></img>
                     <InnerNavContainer>
-                        <InnerNavigation 
-                            baseUrl={match.url}
-                            nameUrl="Cast"
-                            toGo="cast"
-                        />
-                        <InnerNavigation 
-                            baseUrl = {match.url}
-                            nameUrl = "Reviews"
-                            toGo="reviews"
-                        />
+                        <InnerNavigationList>
+                            <InnerNavigationItem 
+                                baseUrl={match.url}
+                                nameUrl="Cast"
+                                toGo="cast"
+                            />
+                            <InnerNavigationItem
+                                baseUrl = {match.url}
+                                nameUrl = "Reviews"
+                                toGo="reviews"
+                            />
+                        </InnerNavigationList>
                     </InnerNavContainer>
                 </div>
                 <div>

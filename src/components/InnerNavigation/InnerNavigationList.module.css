@@ -1,0 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.navLinkList {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

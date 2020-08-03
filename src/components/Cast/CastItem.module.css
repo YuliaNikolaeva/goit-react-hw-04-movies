@@ -3,17 +3,20 @@
     padding: 0;
 }
 
-.photo {
-    width: 80px;
-    margin-bottom: 5px;
+.castItemEl {
+    width: 100px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
-.castItem {
-    text-align: center;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    padding: 10px;
-    border: 1px solid #bfc7c8;
-    width: 155px;
+.photoCast {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
 
+.castItemEl:nth-child(5n+5) {
+    margin-right: 0;
 }

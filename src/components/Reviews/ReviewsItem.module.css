@@ -4,13 +4,14 @@
 
 .name {
     font-weight: 800;
-    margin-bottom: 7px;
+    margin-bottom: 5px;
     font-size: 18px;
+    color: #535555;
 }
 
 .content {
-    border-radius: 0% 5%;
-    border: 3px solid #bfc7c8;
-    padding: 20px 10px;
-    background-color: #d4e0e2;
+    border: 1px solid #bfc7c8;
+    padding: 25px;
+    background-color: rgb(239, 244, 245);
+    line-height: 1.4;
 }

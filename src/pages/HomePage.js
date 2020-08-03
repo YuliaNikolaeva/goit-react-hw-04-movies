@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import {getAllFilms}  from '../services/filmsApi';
 
+import MainContainer from '../components/Containers/MainContainer';
 import Error from '../components/Error';
 import SectionContainer from '../components/Containers/SectionContainer';
 import FilmsList from '../components/Films/FilmsList';
@@ -29,19 +30,21 @@ class HomePage extends Component {
         const {films, errorMessage} = this.state;
 
         return <>
-            {errorMessage && <Error />}
-            {films.length > 0 && 
-                <SectionContainer sectionHead="Films">
-                    <FilmsList>
-                        {this.state.films.map(film => (
-                            <FilmsListItem 
-                                film={film} 
-                                key={film.id}
-                            />
-                        ))}
-                    </FilmsList >
-                </SectionContainer>
-            }
+            <MainContainer>
+                {errorMessage && <Error />}
+                {films.length > 0 && 
+                    <SectionContainer sectionHead="Films">
+                        <FilmsList>
+                            {this.state.films.map(film => (
+                                <FilmsListItem 
+                                    film={film} 
+                                    key={film.id}
+                                />
+                            ))}
+                        </FilmsList >
+                    </SectionContainer>
+                }
+            </MainContainer>
         </>
     };
 };

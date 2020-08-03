@@ -5,11 +5,8 @@
 
 .item {
     line-height: 2;
-    padding: 5px 10px;
-    border-radius: 7px;
-    background-color: #bfc7c8;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    display: inline-table;
+    padding: 10px 15px;
 }
 
 .item a {

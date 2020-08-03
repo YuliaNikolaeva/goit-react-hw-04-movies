@@ -3,14 +3,7 @@
     margin: 0;
 }
 
-.navLinkList {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
-
 .navLinkItem {
-    padding: 5px 0;
     cursor: pointer;
 }
 
@@ -26,7 +19,6 @@
     text-decoration: none;
     background-color: #cacddb;
     padding: 10px 0px;
-    border-radius: 5px;
     border: 1px solid #d1cdcd;
     cursor: pointer;
 }

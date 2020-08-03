@@ -1,0 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.mainContainer {
+    padding: 20px 30px;
+    width: 600px;
+}
