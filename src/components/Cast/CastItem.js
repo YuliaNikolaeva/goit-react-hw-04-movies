@@ -12,7 +12,7 @@ const CastItem = ({castItem}) => {
 
     return <li 
     key={castItem.id}
-    className={s.castItemEl}
+    className={s.castItem}
     >
         <img 
         src={photo}
