@@ -113,7 +113,7 @@ class MovieDetailsPage extends Component {
         </SectionContainer>
 
         </>
-    };
+    }
 };
 
 export default MovieDetailsPage;
