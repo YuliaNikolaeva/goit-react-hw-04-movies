@@ -6,7 +6,7 @@ const SectionContainer = ({children, sectionHead}) => {
     return <section className={s.section}>
         <h2>{sectionHead}</h2>
         {children}
-        </section>
+        </section>;
 };
 
 

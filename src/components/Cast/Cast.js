@@ -41,8 +41,8 @@ class Cast extends Component {
                 }
             </>
         );
-    };
-};
+    }
+}
 
 
 export default Cast;

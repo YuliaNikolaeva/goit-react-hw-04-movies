@@ -6,7 +6,7 @@ const ReviewsItem = ({review}) => {
     return <li className={s.listItem}>
         <p className={s.name}>{review.author}:</p>
         <p className={s.content}>{review.content}</p>
-    </li>
+    </li>;
 };
 
 ReviewsItem.defaultProps = {

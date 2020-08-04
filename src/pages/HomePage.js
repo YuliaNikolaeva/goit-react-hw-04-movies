@@ -46,8 +46,8 @@ class HomePage extends Component {
                 }
             </MainContainer>
         </>
-    };
-};
+    }
+}
 
 
 export default HomePage;

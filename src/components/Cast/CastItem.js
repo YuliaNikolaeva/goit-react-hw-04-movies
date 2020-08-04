@@ -20,7 +20,7 @@ const CastItem = ({castItem}) => {
         className={s.photoCast}
         ></img>
         <p>{castItem.name}</p>
-    </li>
+    </li>;
 };
 
 

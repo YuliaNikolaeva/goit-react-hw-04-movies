@@ -45,9 +45,9 @@ class Reviews extends Component {
                     : <NoInfoBox text="Reviews"/>
                 }
             </>
-        )
-    };
-};
+        );
+    }
+}
 
 
 export default Reviews;

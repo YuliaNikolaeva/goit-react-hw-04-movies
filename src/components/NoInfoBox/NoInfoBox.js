@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import s from './NoInfoBox.module.css';
 
 const NoInfoBox = ({text}) => {
-    return <div className={s.noInfoBox}>{`No info about ${text}`}</div>
+    return <div className={s.noInfoBox}>{`No info about ${text}`}</div>;
 };
 
 

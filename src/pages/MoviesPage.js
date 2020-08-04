@@ -12,7 +12,7 @@ class MoviesPage extends Component {
             </SectionContainer>
         </>
         )
-    };
-};
+    }
+}
 
 export default MoviesPage;

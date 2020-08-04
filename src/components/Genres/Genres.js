@@ -6,7 +6,7 @@ import GenresItem from './GenresItem';
 
 
 const Genres = ({head, genres}) => {
-    return (<>
+    return <>
         <div>
             <h4 className={s.head}>{head}</h4>
             <ul className={s.list}>{genres.map(genre => 
@@ -16,7 +16,7 @@ const Genres = ({head, genres}) => {
                 />)}
             </ul>
         </div>
-    </>)
+    </>;
 };
 
 

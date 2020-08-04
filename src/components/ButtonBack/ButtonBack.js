@@ -7,7 +7,7 @@ const ButtonBack = ({goBack}) => {
         type="button"
         className={s.btnBack}
         onClick={goBack}
-     >Go back</button>
+     >Go back</button>;
 };
 
 

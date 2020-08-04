@@ -16,7 +16,7 @@ const FilmsListItem = ({film, location}) => {
         >
         {film.title || film.name}
     </Link>
-</li>
+</li>;
 };
 
 

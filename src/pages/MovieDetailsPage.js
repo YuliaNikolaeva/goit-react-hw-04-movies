@@ -114,6 +114,6 @@ class MovieDetailsPage extends Component {
 
         </>
     }
-};
+}
 
 export default MovieDetailsPage;

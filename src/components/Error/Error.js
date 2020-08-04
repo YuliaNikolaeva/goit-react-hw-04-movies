@@ -4,7 +4,7 @@ import s from './Error.module.css';
 
 
 const Error = ({text}) => {
-    return <div className={s.errorMassage}>{`Sorry, ${text}`}</div>
+    return <div className={s.errorMassage}>{`Sorry, ${text}`}</div>;
 };
 
 

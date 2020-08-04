@@ -78,8 +78,8 @@ class FormSearch  extends Component {
                 }
             </>
         );
-    };
-};
+    }
+}
 
 
 export default FormSearch;
