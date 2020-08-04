@@ -24,6 +24,6 @@
 }
 
 
-.castItem:nth-child(4n+4) {
+.castItem:nth-child(5n+5) {
     margin-right: 0;
 }
