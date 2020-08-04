@@ -32,6 +32,6 @@ const App = () =>
 			<Route component={HomePage} />
 		</Switch>
 	</Suspense>
-    </>
+    </>;
 
 export default App;

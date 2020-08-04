@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './ButtonBack.module.css'
+import s from './ButtonBack.module.css';
 
 const ButtonBack = ({goBack}) => {
     return <button 

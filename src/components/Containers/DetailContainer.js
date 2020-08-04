@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './DetailContainer.module.css'
+import s from './DetailContainer.module.css';
 
 const DetailContainer = ({head, children}) => {
     return <div className={s.detailContainer}>

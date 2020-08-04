@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import s from './FormSearch.module.css'
+import s from './FormSearch.module.css';
 
 import {getFilmByRequest} from '../../services/filmsApi';
 
