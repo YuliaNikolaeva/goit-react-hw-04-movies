@@ -5,15 +5,14 @@
 
 .castItem {
     width: 100px;
-    display: inline-block;
     margin-right: 20px;
     margin-bottom: 32px;
     height: 188px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     background-color: #dedfe2;
     padding: 6px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
