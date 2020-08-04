@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.castItem {
+    width: 100px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 32px;
+    height: 188px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #dedfe2;
+    padding: 6px;
+
+}
+
+.photoCast {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.castItem:nth-child(4n+4) {
+    margin-right: 0;
+}

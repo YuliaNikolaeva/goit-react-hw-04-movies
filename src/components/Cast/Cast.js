@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import {getCastAboutOneFilm} from '../../services/filmsApi';
 
-import s from './Cast.module.css';
-
 import Error from '../Error'
-import CastItem from './CastItem';
+import CastList from '../CastList';
+import CastItem from '../CastItem';
 import DetailContainer from '../Containers/DetailContainer';
 import NoInfoBox from '../NoInfoBox';
 
@@ -31,11 +30,11 @@ class Cast extends Component {
                 {errorMessage && <Error /> }
                 {cast.length > 0 
                     ? <DetailContainer head="Cast">
-                            <ul className={s.castList}>
+                            <CastList>
                                 {cast.map(castItem => (
                                     <CastItem key={castItem.id} castItem={castItem}/>
                                 ))}
-                            </ul>
+                            </CastList>
                         </DetailContainer>
                     : <NoInfoBox text="Cast"/>
                 }
