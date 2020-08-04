@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {getCastAboutOneFilm} from '../../services/filmsApi';
 
-import Error from '../Error'
+import Error from '../Error';
 import CastList from '../CastList';
 import CastItem from '../CastItem';
 import DetailContainer from '../Containers/DetailContainer';
